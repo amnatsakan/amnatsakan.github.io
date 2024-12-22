@@ -1318,6 +1318,28 @@ section,
   border-radius: 50%;
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 40%);
   margin-right: 15px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+.info-item{
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .info-wrap .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info-wrap .col-lg-3,
+  .info-wrap .col-md-4,
+  .info-wrap .col-6 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .info-wrap .col-lg-3:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .contact .info-item h3 {
@@ -1637,6 +1659,33 @@ section,
   display: flex; /* Center content */
   justify-content: center;
   align-items: center;
+}
+
+.spaced-links {
+  margin-left: 20px; /* Adds space between the email and LinkedIn logo */
+}
+
+.spaced-links a {
+  text-decoration: none; /* Optional: to ensure there's no underline */
+}
+
+.email-link {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Default icon color */
+}
+
+.phone-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.linkedin-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.linkedin-column {
+  margin-left: -60px; /* Adjust this value to reduce the gap */
 }
 /*--------------------------------------------------------------
 # Starter Section Section
